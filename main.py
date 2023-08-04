@@ -14,6 +14,9 @@ import warnings
 warnings.filterwarnings('ignore')
 
 df = pd.read_csv('bitcoin.csv')
-df.head()
 
-print(df.info())
+plt.figure(figsize=(15, 5))
+plt.plot(df['Close'])
+plt.title('Bitcoin price.', fontsize=15)
+plt.ylabel('Price in dollars.')
+plt.show()
